@@ -2,6 +2,7 @@ package com.qa.opencart.base;
 
 import java.util.Properties;
 
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -39,5 +40,21 @@ public class BaseTest {
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
+	}
+	
+	public String randomString() {
+		String generated_string = RandomStringUtils.randomAlphabetic(7);
+		return generated_string;
+	}
+
+	public String randomNum() {
+		String generated_int = RandomStringUtils.randomNumeric(10);
+		return generated_int;
+	}
+
+	public String randomAlphaNumeric() {
+		String generated_string = RandomStringUtils.randomAlphabetic(7);
+		String generated_int = RandomStringUtils.randomNumeric(10);
+		return (generated_string + "@" + generated_int);
 	}
 }

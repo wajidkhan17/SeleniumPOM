@@ -6,12 +6,13 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
+import com.beust.jcommander.Parameters;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstatnts;
 
 public class AccountPageTest extends BaseTest {
 
-	@BeforeClass
+	@BeforeClass 
 	public void accSetup() {
 		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}

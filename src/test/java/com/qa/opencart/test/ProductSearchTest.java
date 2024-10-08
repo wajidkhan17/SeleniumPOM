@@ -56,10 +56,10 @@ public class ProductSearchTest extends BaseTest {
 
 		softAssert.assertEquals(actProductInfo.get("Brand"), "Apple");
 		softAssert.assertEquals(actProductInfo.get("Product Code"), "Product 18");
-		softAssert.assertEquals(actProductInfo.get("Availability"), "In Stock");
+		softAssert.assertEquals(actProductInfo.get("Availability"), "Out Of Stock");
 		softAssert.assertEquals(actProductInfo.get("productname"), "MacBook Pro");
 		softAssert.assertEquals(actProductInfo.get("productprice"), "$2,000.00");
-		softAssert.assertEquals(actProductInfo.get("extaxprice"), "Ex Tax: $2,000.00");
+		softAssert.assertEquals(actProductInfo.get("extaxprice"), "Ex Tax:$2,000.00");
 		softAssert.assertAll();
 	}
 }

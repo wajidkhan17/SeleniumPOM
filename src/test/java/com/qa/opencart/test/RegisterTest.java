@@ -1,5 +1,7 @@
 package com.qa.opencart.test;
 
+import java.util.Random;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -9,7 +11,6 @@ import org.testng.annotations.Test;
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstatnts;
 import com.qa.opencart.utils.ExcelUtil;
-
 
 public class RegisterTest extends BaseTest {
 
@@ -32,27 +33,18 @@ public class RegisterTest extends BaseTest {
 	}
 
 	@Test(dataProvider = "getRegisterExcelData")
-	public void userRegistration(String firstName, String lastName, String email, String telephone, String password,
+	public void userRegistration(String firstName, String lastName, String telephone, String password,
 			String subscribe) {
-		boolean succeFlag = registerPage.userRegistration(firstName, lastName, email, telephone, password, subscribe);
+		boolean succeFlag = registerPage.userRegistration(firstName, lastName, randomEmail(), telephone, password,
+				subscribe);
 		registerPage.goToRegisterPage();
 		Assert.assertEquals(succeFlag, true);
 	}
 
-	public String randomString() {
-		String generated_string = RandomStringUtils.randomAlphabetic(7);
-		return generated_string;
-	}
-
-	public String randomNum() {
-		String generated_int = RandomStringUtils.randomNumeric(10);
-		return generated_int;
-	}
-
-	public String randomAlphaNumeric() {
-		String generated_string = RandomStringUtils.randomAlphabetic(7);
-		String generated_int = RandomStringUtils.randomNumeric(10);
-		return (generated_string + "@" + generated_int);
+	public String randomEmail() {
+		Random random = new Random();
+		String email = "automation" + random.nextInt(10000) + "@gmail.com";
+		return email;
 	}
 
 }

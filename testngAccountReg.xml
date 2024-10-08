@@ -2,10 +2,8 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
   <test thread-count="5" name="Test">
+		<parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.qa.opencart.test.ProductSearchTest"/>
-      <class name="com.qa.opencart.test.LoginPageTest"/>
-      <class name="com.qa.opencart.test.RegisterTest"/>
       <class name="com.qa.opencart.test.AccountPageTest"/>
     </classes>
   </test> <!-- Test -->

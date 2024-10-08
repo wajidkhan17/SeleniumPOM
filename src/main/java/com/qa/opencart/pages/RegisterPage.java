@@ -54,6 +54,7 @@ public class RegisterPage {
 
 		} else {
 			return false;
+			//return
 		}
 	}
 
