@@ -1,0 +1,12 @@
+D:\POMSelenium\src\main\java\com\qa\opencart\pages\RegisterPage.java
+D:\POMSelenium\src\main\java\com\qa\opencart\utils\ExcelUtil.java
+D:\POMSelenium\src\main\java\com\qa\opencart\listeners\ExtentReportListener.java
+D:\POMSelenium\src\main\java\com\qa\opencart\constants\AppConstatnts.java
+D:\POMSelenium\src\main\java\com\qa\opencart\factory\DriverFactory.java
+D:\POMSelenium\src\main\java\com\qa\opencart\pages\AccountsPage.java
+D:\POMSelenium\src\main\java\com\qa\opencart\pages\ProductInfoPage.java
+D:\POMSelenium\src\main\java\com\qa\opencart\factory\OptionsManager.java
+D:\POMSelenium\src\main\java\com\qa\opencart\listeners\TestAllureListener.java
+D:\POMSelenium\src\main\java\com\qa\opencart\pages\LoginPage.java
+D:\POMSelenium\src\main\java\com\qa\opencart\utils\ElementUtil.java
+D:\POMSelenium\src\main\java\com\qa\opencart\pages\SearchResultsPage.java

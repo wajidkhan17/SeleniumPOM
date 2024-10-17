@@ -34,7 +34,8 @@ public class DriverFactory {
 	 */
 	public WebDriver initDriver(Properties prop) {
 		
-		String browserName = prop.getProperty("browser");
+		String browserName  = prop.getProperty("browser");
+		System.out.println("browser name is : " + browserName);
 		optionsManager = new OptionsManager(prop);
 		switch (browserName) {
 		case "chrome":
